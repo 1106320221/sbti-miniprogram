@@ -1,0 +1,181 @@
+.shell {
+  padding: 32rpx;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  background: #252b3d;
+  border: 2rpx solid #3a4255;
+  border-radius: 24rpx;
+  overflow: hidden;
+}
+
+.hero {
+  padding: 60rpx 40rpx;
+  position: relative;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -80rpx;
+  top: -80rpx;
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(212,168,83,0.12), rgba(212,168,83,0.02));
+  pointer-events: none;
+}
+
+.hero-header {
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+
+.hero-tag {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #d4a853;
+  border: 1rpx solid #d4a853;
+  padding: 8rpx 24rpx;
+  border-radius: 40rpx;
+  margin-bottom: 32rpx;
+  letter-spacing: 0.1em;
+}
+
+.hero-title {
+  display: block;
+  font-size: 64rpx;
+  font-weight: bold;
+  color: #f0f0f0;
+  line-height: 1.2;
+  margin-bottom: 16rpx;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  display: block;
+  font-size: 32rpx;
+  color: #a0a8b8;
+  line-height: 1.4;
+}
+
+.hero-desc {
+  max-width: 480rpx;
+  margin: 0 auto 48rpx;
+  font-size: 28rpx;
+  line-height: 1.9;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.hero-desc-secondary {
+  display: block;
+  margin-top: 24rpx;
+  color: #a0a8b8;
+  font-size: 26rpx;
+}
+
+.hero-actions-single {
+  justify-content: center;
+}
+
+.start-btn {
+  width: 320rpx;
+  height: 96rpx;
+  background: linear-gradient(135deg, #8b2635, #6b1a25);
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: bold;
+  border-radius: 48rpx;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 0 16rpx 40rpx rgba(139,38,53,0.3);
+}
+
+.notes {
+  margin-top: 48rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+  text-align: center;
+}
+
+.notes text {
+  font-size: 24rpx;
+  color: #6a7280;
+  display: block;
+}
+
+.disclaimer-box {
+  margin-top: 48rpx;
+  padding: 32rpx;
+  background: rgba(212, 168, 83, 0.08);
+  border: 1rpx solid rgba(212, 168, 83, 0.3);
+  border-radius: 16rpx;
+}
+
+.disclaimer-title {
+  font-size: 26rpx;
+  color: #d4a853;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.disclaimer-text {
+  font-size: 22rpx;
+  color: #a0a8b8;
+  line-height: 1.8;
+  display: block;
+}
+
+.project-url {
+  margin-top: 12rpx;
+}
+
+@media screen and (max-width: 375px) {
+  .hero {
+    padding: 48rpx 32rpx;
+  }
+  
+  .hero-title {
+    font-size: 56rpx;
+  }
+  
+  .hero-subtitle {
+    font-size: 28rpx;
+  }
+  
+  .hero-desc {
+    font-size: 26rpx;
+  }
+  
+  .start-btn {
+    width: 280rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 30rpx;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  .hero {
+    padding: 80rpx 48rpx;
+  }
+  
+  .hero-title {
+    font-size: 72rpx;
+  }
+  
+  .hero-desc {
+    max-width: 560rpx;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/intro/intro",
+    "pages/test/test",
+    "pages/result/result"
+  ],
+  "window": {
+    "navigationBarTitleText": "SBTI 人格测试",
+    "navigationBarBackgroundColor": "#1a1f2e",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#1a1f2e"
+  },
+  "permission": {
+    "scope.userInfo": {
+      "desc": "用于展示用户信息"
+    }
+  },
+  "requiredPrivateInfos": [],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,39 @@
+<view class="shell">
+  <view class="test-wrap card">
+    <view class="topbar">
+      <view class="progress">
+        <view class="progress-bar" style="width: {{progressPercent}}%;"></view>
+      </view>
+      <view class="progress-text">{{answeredCount}} / {{totalCount}}</view>
+    </view>
+    <view class="question-list">
+      <block wx:for="{{visibleQuestions}}" wx:key="id">
+        <view class="question">
+          <view class="question-meta">
+            <view class="badge">
+              <text wx:if="{{item.special}}">补充题</text>
+              <text wx:else>第 {{index + 1}} 题</text>
+            </view>
+            <view class="dim-hint">{{dimensionMeta[item.dim].name}}</view>
+          </view>
+          <view class="question-title">{{item.text}}</view>
+          <radio-group class="options" bindchange="onAnswerChange" data-qid="{{item.id}}">
+            <label class="option" wx:for="{{item.options}}" wx:key="value" wx:for-item="opt">
+              <radio value="{{opt.value}}" checked="{{answers[item.id] === opt.value}}" />
+              <view class="option-content">
+                <text class="option-code">{{String.fromCharCode(65 + index)}}</text>
+                <text class="option-text">{{opt.label}}</text>
+              </view>
+            </label>
+          </radio-group>
+        </view>
+      </block>
+    </view>
+    <view class="bottombar">
+      <button class="btn-primary" disabled="{{!canSubmit}}" bindtap="submitTest">提交测试</button>
+    </view>
+    <view class="test-hint" wx:if="{{canSubmit}}">
+      所有题目已完成，可以查看结果了！
+    </view>
+  </view>
+</view>

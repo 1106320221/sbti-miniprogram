@@ -1,0 +1,46 @@
+page {
+  background: linear-gradient(135deg, #1a1f2e 0%, #252b3d 50%, #1e2433 100%);
+  color: #f0f0f0;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 28rpx;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.shell {
+  max-width: 980rpx;
+  margin: 0 auto;
+  padding: 48rpx 32rpx 112rpx;
+}
+
+.card {
+  background: #252b3d;
+  border: 2rpx solid #3a4255;
+  border-radius: 24rpx;
+  box-shadow: 0 32rpx 80rpx rgba(0, 0, 0, 0.4);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #8b2635, #a02d3a);
+  color: #ffffff;
+  padding: 32rpx 56rpx;
+  border-radius: 24rpx;
+  box-shadow: 0 16rpx 50rpx rgba(139, 38, 53, 0.4);
+  font-weight: 700;
+  font-size: 32rpx;
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #d4a853;
+  padding: 32rpx 56rpx;
+  border-radius: 24rpx;
+  border: 2px solid #d4a853;
+  font-weight: 700;
+  font-size: 32rpx;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

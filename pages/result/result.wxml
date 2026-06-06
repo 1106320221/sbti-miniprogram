@@ -1,0 +1,68 @@
+<view class="shell">
+  <view class="result-container card">
+    <view class="result-image-section" wx:if="{{hasImage}}">
+      <view class="image-wrapper" wx:if="{{!imageLoaded && !imageLoadError}}">
+        <text class="loading-text">加载中...</text>
+        <text class="loading-url">{{imageUrl}}</text>
+      </view>
+      <view class="image-wrapper" wx:if="{{imageLoadError}}">
+        <text class="loading-text">图片加载失败</text>
+        <text class="loading-url">{{imageUrl}}</text>
+      </view>
+      <image 
+        class="personality-image {{imageLoaded ? 'loaded' : ''}}" 
+        src="{{imageUrl}}" 
+        mode="aspectFit"
+        bindload="onImageLoad"
+        binderror="onImageError"
+        wx:if="{{!imageLoadError}}"
+      />
+    </view>
+    
+    <view class="result-info-section">
+      <text class="result-label">你的三江口人格</text>
+      <text class="personality-name">{{typeName}}</text>
+      
+      <view class="match-badge" wx:if="{{matchCount}}">
+        <text class="match-text">匹配度 {{matchCount}}/15</text>
+      </view>
+      
+      <text class="personality-intro" wx:if="{{typeDesc}}">{{typeDesc}}</text>
+      <text class="personality-intro" wx:else>完成测试后，这里将显示你的专属人格解读。</text>
+    </view>
+
+    <view class="dim-box" wx:if="{{dimList.length > 0}}">
+      <view class="section-title">十五维度评分</view>
+      <view class="dim-list">
+        <view class="dim-item level-{{item.level}}" wx:for="{{dimList}}" wx:key="code">
+          <view class="dim-item-top">
+            <view class="dim-item-name">{{item.name}}</view>
+            <view class="dim-item-score">{{item.level}}</view>
+          </view>
+          <view class="dim-item-desc">{{item.desc}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="note-box">
+      <view class="section-title">友情提示</view>
+      <view class="note-text">本测试仅供娱乐，别拿它当破案工具、相亲依据、卧底任务、招魂仪式、算命方法或人生判决书。配合调查，是每个公民应尽的义务——包括你自己。</view>
+    </view>
+
+    <view class="author-info">
+      <view class="author-summary">三江口警局提醒您</view>
+      <view class="author-content">
+        <view class="author-text">本测试为粉丝向娱乐作品，测试结果仅供参考，与任何真实人物、事件无关。</view>
+        <view class="author-text">如有雷同，纯属巧合。永远不要向牛舌低头。怀疑怀疑的怀疑，证据证据的证据。</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="result-actions">
+    <button class="btn-share" open-type="share">
+      <text>↗</text>
+      <text>分享我的结果</text>
+    </button>
+    <button class="btn-restart" bindtap="restartTest">重新测试</button>
+  </view>
+</view>

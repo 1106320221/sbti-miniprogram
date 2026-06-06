@@ -1,0 +1,29 @@
+<view class="shell">
+  <view class="hero card">
+    <view class="hero-header">
+      <text class="hero-tag">三江口刑侦档案</text>
+      <text class="hero-title">SBTI 人格测试</text>
+      <text class="hero-subtitle">犯罪心理侧写系统</text>
+    </view>
+    <view class="hero-desc">
+      <text>配合调查，是每个公民应尽的义务。包括你自己。</text>
+      <text class="hero-desc-secondary">本测试为粉丝向娱乐作品，带你深入三江口的荒诞刑侦世界。</text>
+    </view>
+    <view class="hero-actions hero-actions-single">
+      <button class="start-btn" bindtap="startTest">📁 开启调查</button>
+    </view>
+    <view class="notes">
+      <text>⚠️ 本测试仅供娱乐，别拿它当破案工具</text>
+      <text>🔍 30道测试题 + 特殊触发机制</text>
+    </view>
+    <view class="disclaimer-box">
+      <text class="disclaimer-title">项目说明</text>
+      <text class="disclaimer-text">原作者：B站@蛆肉儿串儿</text>
+      <text class="disclaimer-text project-url">原项目地址：https://github.com/zealscott/sbti</text>
+    </view>
+    <view class="disclaimer-box">
+      <text class="disclaimer-title">免责声明</text>
+      <text class="disclaimer-text">本测试为粉丝向娱乐作品，灵感来源于电视剧《低智商犯罪》。所有人物设定、经典台词引用仅用于娱乐目的，不代表官方立场。测试结果为算法生成，仅供娱乐，请勿作为任何决策依据。</text>
+    </view>
+  </view>
+</view>
